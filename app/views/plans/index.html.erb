@@ -1,0 +1,24 @@
+<p style="color: green"><%= notice %></p>
+
+<h2>予定一覧</h2>
+
+<div id="plans">
+  <% @plans.each do |plan| %>
+    <%= render plan %>
+    <p>
+      <%= link_to "詳細", plan %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "新規作成", new_plan_path %>
+
+<%= month_calendar events: @plans do |date, plans| %>
+  <%= date.day %>
+
+  <% plans.each do |plan| %>
+    <div>
+      <%= link_to plan.title %>
+    </div>
+  <% end %>
+<% end %>

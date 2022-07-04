@@ -1,0 +1,24 @@
+// カレンダーの設定
+.simple-calendar {
+    .day a {
+      background: #fff9ee;
+    }
+    .wday-0 a {
+      background: #ffeaea;
+      color: #ff505c;
+    }
+      .wday-6 a {
+      background: #d4ebff;
+      color: #5984dc;
+    }
+    .today a {
+      background: #FFA0A0;
+    }
+    .has-events a {
+        background-color: green;
+    }
+  }
+  /* ホバーした際の背景色 tableタグにcalender_tableクラスを追記しています*/
+  .calendar-table tr td:hover a {
+    background-color: #FFFF8c;    
+  }
